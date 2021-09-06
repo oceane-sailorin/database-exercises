@@ -22,8 +22,11 @@ For example, your query should return the following for the above table:
 
 
 # Write your MySQL query statement below
+#first example:
 select Email from Person Group by Email having COUNT(Email) > 1
 
+#second example:
 select p.Email as Email from Person p, Person p2 where p.Email=p2.Email and p.Id != p2.Id group by p.Email
 
+#third example
 select distinct p.Email as Email from Person p, Person p2 where p.Email=p2.Email and p.Id != p2.Id 
